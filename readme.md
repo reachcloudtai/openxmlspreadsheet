@@ -7,10 +7,9 @@ This wrapper is a generic implementation that takes a List of Type T and Creates
 ### Current Features
 
 - Write To xlsx
+- Write Spreadsheet Files to Memory Stream
 
 ### Future Features
-
-- Write Spreadsheet Files to Memory Stream
 
 - Read Spreadsheet Files to Memory
 
