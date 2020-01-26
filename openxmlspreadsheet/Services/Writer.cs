@@ -33,11 +33,10 @@ namespace OpenXmlSpreadsheet.Services
         {
             return typeof(T);
         }
-        public void Write()
+        private void Write(SpreadsheetDocument document)
         {
             try
             {
-                SpreadsheetDocument document = CreateDocument();
                 using (document)
                 {
                     WorkbookPart workbookPart = document.AddWorkbookPart();
@@ -77,7 +76,9 @@ namespace OpenXmlSpreadsheet.Services
                         sheetData.AppendChild(newRecordRow);
                     }
                     workbookPart.Workbook.Save();
+
                 }
+                
             }
             catch (Exception)
             {
@@ -85,12 +86,45 @@ namespace OpenXmlSpreadsheet.Services
                 throw;
             }
         }
-        private SpreadsheetDocument CreateDocument()
-        {
 
-            return SpreadsheetDocument.Create(_SpreadSheetName, SpreadsheetDocumentType.Workbook);
+        public string WriteToFile()
+        {
+            try
+            {
+                var document = SpreadsheetDocument.Create(_SpreadSheetName, SpreadsheetDocumentType.Workbook);
+                
+                    Write(document);
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return _SpreadSheetName;
 
         }
+        public MemoryStream WriteToMemory()
+        {
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+               
+                    var document = SpreadsheetDocument.Create(ms, SpreadsheetDocumentType.Workbook);
+                   Write(document);
+                   
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return ms;
+
+        }
+
+
+
         private List<string> GetColumnNames()
         {
             List<String> columnNames = new List<string>();

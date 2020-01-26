@@ -1,7 +1,10 @@
-﻿namespace OpenXmlSpreadsheet.Interfaces
+﻿using System.IO;
+
+namespace OpenXmlSpreadsheet.Interfaces
 {
     public interface IWriter<T>
     {
-        void Write();
+        string WriteToFile();
+        MemoryStream WriteToMemory();
     }
 }
