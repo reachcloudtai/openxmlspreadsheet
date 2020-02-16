@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>2972765f-8375-49f2-9254-e8d9fcea2d2d</id>
+    <version>0.1</version>
+    <title>OpenXmlSpreadsheet</title>
+    <authors>Cloudtai</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>True</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/reachcloudtai/openxmlspreadsheet</projectUrl>
+    <iconUrl>http://icon_url_here_or_delete_this_line/</iconUrl>
+    <description>OpenXmlSpreadsheet is a wrapper for OpenXml.Spreadsheet that makes it easier to Read and Write Spread Sheet or Excel Files into and from Lists. This wrapper is a generic implementation that takes a List of Type T and Creates the Excel File From It. Similarly it can read an excel file to a type T . </description>
+    <releaseNotes>OpenXmlSpreadsheet is a wrapper for OpenXml</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>OpenXmlSpreadsheet dotnetcorexlsx</tags>
+  </metadata>
+</package>
