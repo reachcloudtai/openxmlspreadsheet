@@ -27,6 +27,6 @@ jobs:
         # Whether to create a tag when there's a version change or not
         TAG_COMMIT: # optional, default is true
         # Format of the tag, `*` is the placeholder for actual version
-        TAG_FORMAT:v* # optional, default is v*
+        TAG_FORMAT:  # optional, default is v*
         # API key for the NuGet feed
-        NUGET_KEY: 'oy2ppglvkwej3lf57nwadacdjpw4qavuzcdo3oef3g3t6q'
+        NUGET_KEY: "oy2ppglvkwej3lf57nwadacdjpw4qavuzcdo3oef3g3t6q"
