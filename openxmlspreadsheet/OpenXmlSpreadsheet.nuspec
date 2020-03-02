@@ -15,4 +15,8 @@
     <copyright>Copyright 2020</copyright>
     <tags>OpenXmlSpreadsheet dotnetcorexlsx</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\AppLogger.dll" target="lib\netstandard1.4\AppLogger.dll" />
+    <file src="bin\Release\AppLogger.xml" target="lib\netstandard1.4\AppLogger.xml" />
+  </files>
 </package>
